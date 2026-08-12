@@ -1,5 +1,5 @@
 {:repository/version 1
- :repository/path "orgs/etzhayyim/com-etzhayyim-shinka"
+ :repository/path "orgs/etzhayyim/actor-shinka"
  :layout {:source "src" :tests "test" :data "data" :schema "schema"
           :contracts "contracts" :external-wire "wire"}
  :canonical {:metadata "manifest.edn"
