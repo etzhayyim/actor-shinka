@@ -3,7 +3,7 @@
   reconciliation. Planning is pure; HTTP is injected and never invoked by the
   default CLI path."
   (:require [clojure.edn :as edn]
-            [cheshire.core :as json]
+            [json.compat :as json]
             [clojure.pprint :as pprint])
   (:import [java.net URI]
            [java.net.http HttpClient HttpRequest HttpRequest$BodyPublishers
