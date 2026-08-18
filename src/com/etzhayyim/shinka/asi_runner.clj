@@ -5,7 +5,7 @@
   observable without giving a scheduled process authority to dispatch work,
   sign a CACAO, or materialize a model/code change."
   (:require [clojure.edn :as edn]
-            [cheshire.core :as json]
+            [json.compat :as json]
             [clojure.pprint :as pprint]
             [com.etzhayyim.shinka.asi :as asi])
   (:import [java.net URI]
