@@ -4,7 +4,7 @@
   This namespace is the cljc actor boundary for did:web:shinka.etzhayyim.com.
   Side-effecting MST/IPFS/PDS writes are represented as effect maps so the same
   logic can run in JVM, CLJS, or a host actor runtime."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def actor-did "did:web:shinka.etzhayyim.com")
 

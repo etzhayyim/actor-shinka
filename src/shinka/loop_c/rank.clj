@@ -4,7 +4,7 @@
 ;; {:propose-candidate :insufficient-evidence :excluded}. No fabrication: a candidate
 ;; missing the t2 task signal (microbench) cannot be scored → :insufficient-evidence.
 ;; Emits a ranked scorecard (EDN + markdown). Pure data → scorecard (no model run).
-(ns rank (:require [clojure.edn :as edn] [clojure.string :as str] [clojure.java.io :as io]))
+(ns rank (:require [clojure.edn :as edn] [kotoba.lang.text :as str] [clojure.java.io :as io]))
 
 (def here (-> *file* io/file .getParent))
 (def data-dir (io/file here ".." ".." ".." "data" "loop_c"))
