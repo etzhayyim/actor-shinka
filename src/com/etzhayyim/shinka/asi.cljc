@@ -4,7 +4,7 @@
   Capability generation is dispatched only through cloud-murakumo.  Promotion
   is governed by kotoba-fleet and is therefore proposal/signoff-only; this actor
   never writes a git ref, model registry, or weight directly."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kotoba.fleet.evolution :as fleet-evolution]
             [murakumo.infer.evolution :as murakumo-evolution]
             [com.etzhayyim.shinka.murakumo :as actor]))

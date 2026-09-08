@@ -25,7 +25,7 @@
   Python ValueError edge → ex-info; portable .cljc, loads under babashka. There is
   no LangGraph in cljc — the Python cell already falls back to an identical
   sequential super-step driver when StateGraph is None, so `solve` runs that."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; --------------------------------------------------------------------------- ;;
 ;; Charter Rider G1-G8 scanner (local fallback only)
@@ -43,7 +43,7 @@
 (defn local-scan-ok
   "Python _local_scan_ok: true iff no prohibited signal occurs in (lower-cased) text."
   [text]
-  (let [low (str/lower-case (str text))]
+  (let [low (str/lower (str text))]
     (not (some #(str/includes? low %) PROHIBITED-SIGNALS))))
 
 ;; In a bare cljc checkout the canonical scanner is unavailable → fail open to local.
@@ -266,7 +266,7 @@
                          (str "Adversarially debate which proposal better advances the task "
                               "under the Charter. A:\n" (proposal-text a) "\n\nB:\n"
                               (proposal-text b) "\n\nAnswer exactly 'A' or 'B'."))
-                        str str/trim str/upper-case)]
+                        str str/trim str/upper)]
               (cond (str/starts-with? v "A") true
                     (str/starts-with? v "B") false
                     :else nil))
