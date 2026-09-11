@@ -11,4 +11,4 @@ It cannot rewrite another actor's identity or policy, publish as that actor, or
 cause external effects without that actor's scoped capability, review, canary,
 and promotion gates. Model output remains a candidate, never governance.
 
-Run the CLJC suite with `clojure -M:test`.
+Run the CLJC suite with `kbb -M:test`.

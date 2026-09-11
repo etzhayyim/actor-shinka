@@ -9,9 +9,9 @@ Implements **R0** of ADR-2606172200 (Loop C): rank the *existing* weight family 
 - `rank.clj` — pure-data ranker: tiered cost-gated fitness (weights Σ=1.0, renormalised
   over present terms), requires the t2 task signal (`microbench`) to be scoreable, Elo/score
   over the comparable cohort, route ∈ `{:propose-candidate :insufficient-evidence :excluded}`.
-  Emits `scorecard.edn` + `scorecard.md` (the PR-draft artifact). `bb rank.clj`.
+  Emits `scorecard.edn` + `scorecard.md` (the PR-draft artifact). `kbb rank.cljk`.
 - `rank_test.clj` — invariants: Σweights=1.0, **no-fabrication** (unmeasured→insufficient),
-  scoreable→propose, ranking order, oka(R0) never scored. `bb rank_test.clj` (ALL PASS).
+  scoreable→propose, ranking order, oka(R0) never scored. `kbb rank_test.cljk` (ALL PASS).
 
 ## Current R0 result (`scorecard.md`)
 
@@ -32,7 +32,7 @@ only behind a member-signed capability.
 **R1 cohort-bench harness (ready):** `70-tools/scripts/maxwell/bench_micro.py` runs any
 HF causal-LM (optionally base+LoRA) through the **same** e7m microbench set that scored
 `maxwell-diffusion-1` at 0.80, emitting a comparable pass-rate + tok/s. Run on gad
-(Murakumo), then fold `{score, tok_s}` into `genotypes.edn` and re-run `bb rank.clj`:
+(Murakumo), then fold `{score, tok_s}` into `genotypes.edn` and re-run `kbb rank.cljk`:
 
 ```
 scp 70-tools/scripts/bench/baien-microbench/microbench.py gad:~/maxwell/

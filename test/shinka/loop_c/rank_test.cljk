@@ -1,5 +1,5 @@
-#!/usr/bin/env bb
-;; Loop C R0 invariants (no-fabrication + weight-sum + routing). Run: bb rank_test.clj
+#!/usr/bin/env kbb
+;; Loop C R0 invariants (no-fabrication + weight-sum + routing). Run: kbb rank_test.cljk
 (ns rank-test (:require [clojure.edn :as edn] [clojure.java.io :as io]))
 (def here (-> *file* io/file .getParent))
 (def repo-root (io/file here ".." ".." ".."))
