@@ -1,0 +1,18 @@
+{:format :kotoba.cljk-origin/v1
+ :renamed-on "2026-09-11"
+ :decision "adr-2609111500-cljk-rename-all-clojure-source (com-junkawasaki/root 90-docs/adr; owner instruction 2026-09-11)"
+ :rule "value = the extension the file had before the rename. A path ending in .clj.cljk or .cljs.cljk kept it in the name because both platform files existed (or the plain target was taken)."
+ :origins
+ {"scripts/run-task.cljk" ".cljs"
+  "src/com/etzhayyim/shinka/asi.cljk" ".cljc"
+  "src/com/etzhayyim/shinka/asi_runner.cljk" ".clj"
+  "src/com/etzhayyim/shinka/catalog_reconcile.cljk" ".clj"
+  "src/com/etzhayyim/shinka/murakumo.cljk" ".cljc"
+  "src/shinka/engine/cell.cljk" ".cljc"
+  "src/shinka/loop_c/rank.cljk" ".clj"
+  "src/shinka/murakumo.cljk" ".cljc"
+  "test/com/etzhayyim/shinka/asi_runner_test.cljk" ".clj"
+  "test/com/etzhayyim/shinka/asi_test.cljk" ".cljc"
+  "test/com/etzhayyim/shinka/catalog_reconcile_test.cljk" ".clj"
+  "test/com/etzhayyim/shinka/murakumo_test.cljk" ".cljc"
+  "test/shinka/loop_c/rank_test.cljk" ".clj"}}
