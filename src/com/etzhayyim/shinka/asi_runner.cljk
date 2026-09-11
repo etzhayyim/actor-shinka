@@ -172,7 +172,7 @@
               :observation-error (ex-message e))))))
 
 (defn -main
-  "`clojure -M -m com.etzhayyim.shinka.asi-runner beat.edn`.
+  "`kbb -M -m com.etzhayyim.shinka.asi-runner beat.edn`.
   Outputs EDN and exits 0 for ready, 2 for an expected blocked preflight."
   [& args]
   (let [[live? path] (if (= "--live" (first args)) [true (second args)] [false (first args)])]

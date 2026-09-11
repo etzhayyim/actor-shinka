@@ -114,7 +114,7 @@
                         {:cause (ex-message cause)} cause))))))
 
 (defn -main
-  "`bb asi-reconcile [--apply] proposal.edn`. Dry-run is the default."
+  "`kbb -M:asi-reconcile [--apply] proposal.edn`. Dry-run is the default."
   [& args]
   (let [[apply? path] (if (= "--apply" (first args)) [true (second args)] [false (first args)])]
     (if-not path

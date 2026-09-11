@@ -26,12 +26,12 @@ fleet is degraded, every beat records a blocked state and emits no dispatch
 effect.  This makes recovery observable without converting a stale dashboard
 into autonomous work.
 
-Run the actor contract tests with `bb test`.  Check a fresh fleet observation
+Run the actor contract tests with `kbb -M:test`.  Check a fresh fleet observation
 before an operator dispatches a beat:
 
 ```sh
-bb asi-check examples/asi-beat.edn
-bb asi-check --live examples/asi-beat.edn
+kbb -M:asi-check examples/asi-beat.edn
+kbb -M:asi-check --live examples/asi-beat.edn
 ```
 
 `--live` reads `MURAKUMO_CLOUD/infer/fleet` (default:
@@ -61,7 +61,7 @@ For the currently observed Qwen3.6 runtime, the reviewed recommendation is
 Inspect the exact catalog writes with:
 
 ```sh
-bb asi-reconcile examples/qwen3.6-model-reconciliation.edn
+kbb -M:asi-reconcile examples/qwen3.6-model-reconciliation.edn
 ```
 
 Only a host that has an explicit member capability may add `--apply`; it

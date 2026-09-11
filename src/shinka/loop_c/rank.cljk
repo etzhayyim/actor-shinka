@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; Shinka Loop C R0 — rank the existing weight family on REAL measured fitness.
 ;; ADR-2606172200 D6: R0 ranks the family, invents nothing; route ∈
 ;; {:propose-candidate :insufficient-evidence :excluded}. No fabrication: a candidate

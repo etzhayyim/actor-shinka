@@ -7,7 +7,7 @@
          :model/weight-bytes 22100000000
          :model/kv-heads 8}
  ;; Replace with a fresh cloud-murakumo fleet observation.  An unhealthy or
- ;; omitted node causes `bb asi-check` to exit 2 without dispatching anything.
+ ;; omitted node causes `kbb -M:asi-check` to exit 2 without dispatching anything.
  :nodes [{:name "canary"
           :health :down
           :caps #{:inference}
