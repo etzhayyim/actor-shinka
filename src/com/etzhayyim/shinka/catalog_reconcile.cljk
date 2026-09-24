@@ -2,7 +2,7 @@
   "Explicit, CACAO-gated executor for a reviewed cloud-murakumo model catalog
   reconciliation. Planning is pure; HTTP is injected and never invoked by the
   default CLI path."
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [json.compat :as json]
             [clojure.pprint :as pprint])
   (:import [java.net URI]
