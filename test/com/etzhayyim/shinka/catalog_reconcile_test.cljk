@@ -1,5 +1,5 @@
 (ns com.etzhayyim.shinka.catalog-reconcile-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [com.etzhayyim.shinka.catalog-reconcile :as reconcile]))
 
 (def proposal

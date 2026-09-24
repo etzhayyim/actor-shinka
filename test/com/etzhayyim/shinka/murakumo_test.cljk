@@ -1,5 +1,5 @@
 (ns com.etzhayyim.shinka.murakumo-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [com.etzhayyim.shinka.murakumo :as shinka]))
 
 (deftest mood-classification
