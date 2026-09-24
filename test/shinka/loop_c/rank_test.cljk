@@ -1,7 +1,7 @@
 #!/usr/bin/env kbb
 ;; Loop C R0 invariants (no-fabrication + weight-sum + routing). Run: kbb rank_test.cljk
-(ns rank-test (:require [kotoba.lang.edn :as edn] [clojure.java.io :as io]))
-(def here (-> *file* io/file .getParent))
+(ns rank-test (:require [kotoba.lang.edn :as edn] [kotoba.io :as io]))
+(def here (-> *file* io/file io/parent))
 (def repo-root (io/file here ".." ".." ".."))
 (def data-dir (io/file repo-root "data" "loop_c"))
 (def ranker (io/file repo-root "src" "shinka" "loop_c" "rank.clj"))
