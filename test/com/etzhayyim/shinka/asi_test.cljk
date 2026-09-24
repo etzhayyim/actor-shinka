@@ -1,5 +1,5 @@
 (ns com.etzhayyim.shinka.asi-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [com.etzhayyim.shinka.asi :as asi]
             [kotoba.fleet.evolution :as fleet-evolution]))
 
