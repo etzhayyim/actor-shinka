@@ -4,7 +4,7 @@
   This command is intentionally plan-only.  It makes the live-health gate
   observable without giving a scheduled process authority to dispatch work,
   sign a CACAO, or materialize a model/code change."
-  (:require [clojure.edn :as edn]
+  (:require [kotoba.lang.edn :as edn]
             [json.compat :as json]
             [clojure.pprint :as pprint]
             [com.etzhayyim.shinka.asi :as asi])
