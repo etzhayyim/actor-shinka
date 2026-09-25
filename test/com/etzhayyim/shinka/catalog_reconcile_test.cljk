@@ -1,5 +1,5 @@
 (ns com.etzhayyim.shinka.catalog-reconcile-test
-  (:require [kotoba.test :refer [deftest is testing]]
+  (:require [kotoba.lang.error :as kerror] [kotoba.test :refer [deftest is testing]]
             [com.etzhayyim.shinka.catalog-reconcile :as reconcile]))
 
 (def proposal
@@ -25,7 +25,7 @@
 (deftest apply-needs-a-member-cacao-and-uses-injected-writer
   (let [plan (reconcile/reconciliation-plan proposal)
         calls (atom [])]
-    (is (thrown-with-msg? clojure.lang.ExceptionInfo #"CACAO"
+    (is (thrown-with-msg? kerror/ExceptionInfo #"CACAO"
                           (reconcile/apply! plan {})))
     (is (= 2 (count (:writes (reconcile/apply! plan
                                                 {:cacao "member-cacao"
@@ -41,7 +41,7 @@
 (deftest failed-retirement-compensates-the-new-serving-entry
   (let [plan (reconcile/reconciliation-plan proposal)
         writes (atom [])]
-    (is (thrown-with-msg? clojure.lang.ExceptionInfo #"compensated"
+    (is (thrown-with-msg? kerror/ExceptionInfo #"compensated"
                           (reconcile/apply! plan
                                             {:cacao "member-cacao"
                                              :get-fn (constantly nil)
